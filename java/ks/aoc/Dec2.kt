@@ -46,9 +46,9 @@ object Dec2 {
                 else -> 0
             }
             val self = when (it[2]) {
-                'X' -> (opponent - 2).mod(3) + 1  // Lose
-                'Y' -> opponent                         // Draw
-                'Z' -> opponent.mod(3) + 1  // Win
+                'X' -> (opponent - 2).mod(3) + 1 // Lose
+                'Y' -> opponent                  // Draw
+                'Z' -> opponent.mod(3) + 1       // Win
                 else -> 0
             }
             val roundScore = when (it[2]) {
