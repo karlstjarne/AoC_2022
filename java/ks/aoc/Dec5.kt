@@ -8,7 +8,6 @@ object Dec5 {
     lateinit var stacks: MutableList<MutableList<Char>>
     lateinit var instructions: List<String>
 
-    @JvmStatic
     fun a(): String {
         setup()
 
@@ -30,7 +29,6 @@ object Dec5 {
     }
 
 
-    @JvmStatic
     fun b(): String {
         setup()
 

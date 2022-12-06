@@ -2,7 +2,6 @@ package ks.aoc
 
 object Dec2 {
 
-    @JvmStatic
     fun a(): Int {
         val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec2")
         var score = 0
@@ -33,7 +32,6 @@ object Dec2 {
         return score
     }
 
-    @JvmStatic
     fun b(): Int {
         val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec2")
         var score = 0

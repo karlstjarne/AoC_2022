@@ -2,12 +2,10 @@ package ks.aoc
 
 object Dec1 {
 
-    @JvmStatic
     fun a(): Int {
         return getCaloriesPerElf().max()
     }
 
-    @JvmStatic
     fun b(): Int {
         val elves = getCaloriesPerElf()
         return elves.sortedDescending()
