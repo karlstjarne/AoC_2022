@@ -1,5 +1,3 @@
-package ks.aoc
-
 object Dec8 {
 
     fun a(): Int {
@@ -77,7 +75,7 @@ object Dec8 {
     }
 
     private fun getTreeMatrix(): List<List<Tree>> {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec8")
+        val input = readInput("dec8")
 
         val trees: List<List<Tree>> = List(input.size) { List(input.first().length) { Tree() } }
         for (i in input.indices) {

@@ -1,5 +1,3 @@
-package ks.aoc
-
 import java.util.*
 
 object Dec7 {
@@ -15,7 +13,6 @@ object Dec7 {
         fileStructure.forEach {
             val node = it.value
             if (node.type == Type.DIRECTORY && node.size <= 100_000) {
-                println("Node: ${node.id}, size: ${node.size}")
                 totalSum += node.size
             }
         }
@@ -36,7 +33,7 @@ object Dec7 {
     }
 
     private fun setup() {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec7")
+        val input = readInput("dec7")
 
         var currentNode = Node(Type.DIRECTORY, "/", 0, "root-root", "")
 

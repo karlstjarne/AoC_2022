@@ -1,5 +1,3 @@
-package ks.aoc
-
 import java.io.File
 
 object Dec6 {
@@ -15,7 +13,7 @@ object Dec6 {
     }
 
     private fun getIndexOfNotRepeat(window: Int): Int {
-        val input = File(javaClass.classLoader?.getResource("dec6")?.path).useLines { it.first() }
+        val input = File("src", "inputs/dec6").useLines { it.first() }
         var nbrOfChars = 0
 
         for (i in window until input.length) {

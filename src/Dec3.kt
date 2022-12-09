@@ -1,9 +1,7 @@
-package ks.aoc
-
 object Dec3 {
 
     fun a(): Int {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec3")
+        val input = readInput("dec3")
         var prioSum = 0
 
         input.forEach {
@@ -18,7 +16,7 @@ object Dec3 {
     }
 
     fun b(): Int {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec3")
+        val input = readInput("dec3")
         var prioSum = 0
 
         input.windowed(3,3)

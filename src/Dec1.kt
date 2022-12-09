@@ -1,5 +1,3 @@
-package ks.aoc
-
 object Dec1 {
 
     fun a(): Int {
@@ -15,7 +13,7 @@ object Dec1 {
 
 
     private fun getCaloriesPerElf(): List<Int> {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec1")
+        val input = readInput("dec1")
 
         val elves = mutableListOf<Int>()
         var caloriesSum = 0

@@ -1,5 +1,3 @@
-package ks.aoc
-
 object Dec5 {
 
     private val REGEX = Regex("[0-9]+")
@@ -50,7 +48,7 @@ object Dec5 {
     }
 
     private fun setup() {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec5")
+        val input = readInput("dec5")
 
         val stacksRaw = input.subList(0, input.indexOfFirst { !it.contains("[") })
         stacks = mutableListOf(mutableListOf())

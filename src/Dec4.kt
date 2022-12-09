@@ -1,10 +1,8 @@
-package ks.aoc
-
 object Dec4 {
     private val REGEX = Regex("(-|,)")
 
     fun a(): Int {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec4")
+        val input = readInput("dec4")
         var overlaps = 0
 
         input.forEach {
@@ -27,7 +25,7 @@ object Dec4 {
 
 
     fun b(): Int {
-        val input = FileUtil.loadResourceFile(javaClass.classLoader, "dec4")
+        val input = readInput("dec4")
         var overlaps = 0
 
         input.forEach {
