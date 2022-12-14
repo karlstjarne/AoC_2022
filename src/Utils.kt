@@ -7,3 +7,13 @@ import java.security.MessageDigest
  */
 fun readInput(name: String) = File("src", "inputs/$name")
     .readLines()
+
+fun printMatrix(matrix: List<List<String>>) {
+    println(matrix.map {
+        it.toString().replace(",", "")
+    }
+        .toString()
+        .replace("], [", "\n")
+        .replace("[[", "")
+        .replace("]]", ""))
+}
