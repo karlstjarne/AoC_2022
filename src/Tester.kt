@@ -21,4 +21,5 @@ fun main() {
 //    println("Dec 11b: ${Dec11.b()}")
 //    println("Dec 12a: ${Dec12.a()}")
 //    println("Dec 12b: ${Dec12.b()}")
+    println("Dec 18a: ${Dec18.a()}")
 }
