@@ -6,7 +6,7 @@ object Dec21 {
         return getNumberOf("root")
     }
 
-    fun b(): Long {
+    fun b() {
         setup()
         simplifyMonkeyMap()
 
@@ -17,8 +17,6 @@ object Dec21 {
 
         val chain = getChainFromHumnToRoot()
         inverseChainAndPrintAsKotlinCode(chain)
-
-        return monkeyMap["humn"]!!.number
     }
 
     private fun inverseChainAndPrintAsKotlinCode(chain: List<Pair<String, Monkey>>) {
@@ -26,20 +24,29 @@ object Dec21 {
             if (it.first != "humn") {
                 val s1 = if (hasHumnAsChild(it.second.source1Id)) it.second.source1Id else monkeyMap[it.second.source1Id]!!.number
                 val s2 = if (hasHumnAsChild(it.second.source2Id)) it.second.source2Id else monkeyMap[it.second.source2Id]!!.number
-//                println()
-//                println("val ${it.first} = $s1 ${it.second.jobRaw} $s2")
+                println()
+                println("val ${it.first} = $s1 ${it.second.jobRaw} $s2")
 
                 val invertedJob = invertJob(it.second.jobRaw)
                 if (hasHumnAsChild(it.second.source1Id)) {
-                    println("val ${it.second.source1Id} = ${it.first} $invertedJob $s2 ")
+                    println("val ${it.second.source1Id} = ${it.first} $invertedJob $s2")
                 } else {
-                    println("val ${it.second.source2Id} = ${it.first} $invertedJob $s1 ")
+                    if (isMinusOrDivision(it.second.jobRaw)) {
+                        println("val ${it.second.source2Id} = $s1 ${it.second.jobRaw} ${it.first}")
+                    } else {
+                        println("val ${it.second.source2Id} = ${it.first} $invertedJob $s1 ")
+                    }
                 }
             }
         }
     }
 
-    private fun invertJob(job:Char): Char {
+    private fun isMinusOrDivision(operation: Char): Boolean {
+        return operation == '-' || operation == '/'
+
+    }
+
+    private fun invertJob(job: Char): Char {
         return when (job) {
             '+' -> '-'
             '-' -> '+'
