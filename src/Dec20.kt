@@ -1,3 +1,6 @@
+import java.util.Collections.swap
+import kotlin.math.abs
+
 object Dec20 {
 
     fun a(): Long {

@@ -36,10 +36,14 @@ object Dec19 {
         return blueprints.maxOf { it.qualityLevel }
     }
 
+    fun b(): Int {
+        return -1
+    }
+
     class Blueprint(input: String) {
         var qualityLevel = 0
 
-        fun createRobotsIfPossible(inventory: MutableList<Int>): List<Robot> {
+        fun createRobotsIfPossible(inventory: MutableList<Int>): List<Robot> {  // TODO KAST: Need to figure out which robots to construct
             val robots = mutableListOf<Robot>()
 
             robotBlueprints.forEach {
